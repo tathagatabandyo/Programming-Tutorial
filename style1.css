@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(to left top,#8e44ad,#f1c40f) none;
+}
+#c_pro {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    background: linear-gradient(to right bottom,#16a085,#44bd32,#d35400,#6a89cc) no-repeat;
+}
+
+#c_pro h1 {
+    margin: 10px 0;
+    font-size: 35px;
+    color: #fff;
+}
+
+#c_pro p {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+#c_pro p span {
+    font-weight: 900;
+    text-decoration: underline;
+}
+.qus-ans {
+    width: 80%;
+    margin: 0 auto;
+}
+.qus-ans h1 {
+    text-align: center;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+.qus .c-q { /*............input...............*/
+    display: none;
+}
+.qus {
+    display: flex;
+    flex-direction: column;
+}
+.qus > label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #c0392b;
+    padding: 10px 40px 10px 15px;
+    display: block;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    position: relative;
+}
+.qus > .ans {
+    width: 100%;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+} 
+
+.qus .c-q:checked ~ .ans {
+    max-height: 200vh;
+}
+.qus > label::after {
+    content: "\f078";
+    font-family: fontawesome;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+}
+.qus .c-q:checked ~ label::after {
+    transform: rotate(0deg);
+}
+.ans p {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 15px;
+}
+.ans p span {
+    text-decoration: underline;
+}
+
+
+/*...................media screen...........*/
+
+@media screen and (max-width:332px) {
+    #c_pro p {
+        margin: 2px 0;
+        font-size: 14px;
+        font-weight: 200px
+    }
+    #c_pro h1 {
+        margin: 2px 0;
+        font-size: 16px;
+    }
+    .ans p {
+        font-size: 15px;
+        font-weight: 400;
+        padding: 4px;
+    }
+    .qus-ans h1 {
+        font-size: 15px;
+    }
+    .qus > label {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width:334px) and (max-width:400px) {
+    #c_pro p {
+        margin: 4px 0;
+        font-size: 14px;
+        font-weight: 200px
+    }
+    #c_pro h1 {
+        margin: 4px 0;
+        font-size: 20px;
+    }
+    .ans p {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 4px;
+    }
+    .qus-ans h1 {
+        font-size: 18px;
+    }
+    .qus > label {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:869px) {
+    #c_pro p {
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 400px
+    }
+    #c_pro h1 {
+        margin: 4px 0;
+        font-size: 25px;
+    }
+    .ans p {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 5px;
+    }
+    .qus-ans h1 {
+        font-size: 25px;
+    }
+}
